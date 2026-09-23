@@ -1,0 +1,260 @@
+/* --- ZMIENNE DLA JASNEGO MOTYWU (Domyślne) --- */
+:root {
+    --bg-color: #f0f4f8;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(255, 255, 255, 0.9);
+    --text-primary: #1e293b;
+    --text-secondary: #2563eb;
+    --text-muted: #64748b;
+    --blob-1: #60a5fa;
+    --blob-2: #c084fc;
+    --stats-bg: rgba(255, 255, 255, 0.6);
+    --stats-border: rgba(226, 232, 240, 0.9);
+    --btn-sec-bg: #ffffff;
+    --btn-sec-text: #334155;
+    --btn-sec-border: #cbd5e1;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* --- ZMIENNE DLA CIEMNEGO MOTYWU --- */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.85);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #60a5fa;
+    --text-muted: #94a3b8;
+    --blob-1: #1e3a8a;
+    --blob-2: #581c87;
+    --stats-bg: rgba(15, 23, 42, 0.6);
+    --stats-border: rgba(51, 65, 85, 0.8);
+    --btn-sec-bg: #1e293b;
+    --btn-sec-text: #f8fafc;
+    --btn-sec-border: #475569;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* --- APLIKACJA ZMIENNYCH W STYLACH --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+
+/* Dynamiczne plamy tła (Blobs) */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    z-index: 1;
+    animation: float 10s infinite alternate ease-in-out;
+    transition: background 0.4s ease;
+}
+
+.blob-1 {
+    width: 350px;
+    height: 350px;
+    background: var(--blob-1);
+    top: 10%;
+    left: 15%;
+}
+
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--blob-2);
+    bottom: 10%;
+    right: 15%;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 50px) scale(1.1); }
+}
+
+/* Karta Glassmorphism */
+.card {
+    position: relative;
+    z-index: 2;
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px var(--shadow);
+    transition: transform 0.1s ease, box-shadow 0.3s ease, background 0.4s ease, border-color 0.4s ease;
+}
+
+.avatar-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.avatar { font-size: 40px; }
+
+h1 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    transition: color 0.4s ease;
+}
+
+/* Dynamiczny tekst pisania */
+.typing-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 8px 0 16px;
+    font-weight: 600;
+}
+
+#dynamicText {
+    color: var(--text-secondary);
+    transition: color 0.4s ease;
+}
+
+.cursor {
+    animation: blink 0.8s infinite;
+    color: var(--text-secondary);
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    transition: color 0.4s ease;
+}
+
+/* Statystyki */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: var(--stats-bg);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    border: 1px solid var(--stats-border);
+    transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.stat-number {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    transition: color 0.4s ease;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: color 0.4s ease;
+}
+
+/* Przyciski */
+.links { display: flex; flex-direction: column; gap: 12px; }
+
+.btn {
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn.secondary {
+    background: var(--btn-sec-bg);
+    color: var(--btn-sec-text);
+    border: 1px solid var(--btn-sec-border);
+    transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.2s ease;
+}
+
+.btn.secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* Przycisk przełączania motywu */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--stats-bg);
+    border: 1px solid var(--stats-border);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, background 0.4s ease, border-color 0.4s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Powiadomienie Toast */
+.toast {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.toast.show {
+    bottom: 15px;
+    opacity: 1;
+}

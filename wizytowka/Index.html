@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Konrad Werenc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <main class="card" id="tiltCard">
+
+    <button class="theme-toggle" id="themeToggleBtn" aria-label="Zmień motyw">
+    <span id="themeIcon">dark</span>
+    </button>
+        <div class="avatar-container">
+            <img src="" alt="zdjecie profilowe">
+        </div>
+        
+        <h1>Konrad Werenc</h1>
+        
+        <p class="typing-text">Jestem <span id="dynamicText"></span><span class="cursor">|</span></p>
+
+        <p class="bio">
+            Tworzę nowoczesne strony i aplikacje internetowe. Zobacz moje prace poniżej lub skontaktuj się ze mną!
+        </p>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" data-target="1">0</span>
+                <span class="stat-label">Projektów</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span>%
+                <span class="stat-label">Zaangażowania</span>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/Deadlyabyss4" target="_blank" class="btn primary">Zobacz GitHub</a>
+            <button class="btn secondary" id="copyMailBtn">Skopiuj E-mail</button>
+        </div>
+        
+        <div class="toast" id="toast">Adres e-mail skopiowany!</div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
