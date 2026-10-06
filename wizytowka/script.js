@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. OBSŁUGA PRZEŁĄCZANIA MOTYWU (LIGHT / DARK)
     const themeToggleBtn = document.getElementById("themeToggleBtn");
     const themeIcon = document.getElementById("themeIcon");
 
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. EFEKT "TYPING" (PISANIE NA MASZYNIE)
+
     const phrases = ["Aspirującym Developerem", "Pasjonatem Webu", "Twórcą Projektów"];
     let phraseIndex = 0;
     let charIndex = 0;
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeEffect();
 
-    // 3. EFEKT PRZECHYLANIA KARTY 3D (TILT EFFECT)
+    
     const card = document.getElementById("tiltCard");
 
     if (card) {
@@ -89,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 
-    // 5. KOPIOWANIE E-MAILA Z TOASTEM
+   
     const copyBtn = document.getElementById("copyMailBtn");
     const toast = document.getElementById("toast");
-    const myEmail = "twoj-email@example.com";
+    const myEmail = "nightstar2508@gmail.com";
 
     if (copyBtn && toast) {
         copyBtn.addEventListener("click", () => {
