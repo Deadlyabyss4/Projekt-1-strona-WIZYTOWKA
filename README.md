@@ -2,8 +2,6 @@
 
 Prosta i responsywna strona internetowa stworzona jako wizytówka osobista i miejsce na prezentację moich przyszłych projektów.
 
-🔗 **Zobacz wersję na żywo:**"a href="[https://twoja-nazwa.github.io/nazwa-repozytorium/strona.html](https://deadlyabyss4.github.io/Projekt-1-strona-WIZYTOWKA/)" target="_blank""Otwórz stronę w nowej karcie</a> 
-
 ---
 
 ## Użyte technologie
