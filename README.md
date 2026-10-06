@@ -2,7 +2,7 @@
 
 Prosta i responsywna strona internetowa stworzona jako wizytówka osobista i miejsce na prezentację moich przyszłych projektów.
 
-🔗 **Zobacz wersję na żywo:** [Przejdź do strony](https://github.com/Deadlyabyss4/Projekt-1-strona-WIZYTOWKA)
+🔗 **Zobacz wersję na żywo:** [Przejdź do strony](https://github.com/Deadlyabyss4/Projekt-1-strona-WIZYTOWKA/wizytowka/index.html)
 
 ---
 
